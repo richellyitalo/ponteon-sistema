@@ -38,6 +38,9 @@ $this->layout = false;
     <div class="row">
 
         <div class="col-md-6">
+            <div class="text-center">
+		        <?= $this->Html->image('/img/logo.png') ?>
+            </div>
             <h2 class="font-bold">Bem vindo ao sistema Ponteon.</h2>
 
             <p>
