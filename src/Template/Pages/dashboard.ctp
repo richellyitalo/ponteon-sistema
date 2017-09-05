@@ -66,7 +66,11 @@
 $session = $this->request->session();
 
 if ($authUser['message']):
-	$session->write('Auth.User.message', 0);
+
+	$authUser = $session->read('Auth.User');
+	$authUser['message'] = 0;
+	$session->write('Auth.User', $authUser);
+
     ?>
     <div class="modal inmodal fade autoOpen" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">

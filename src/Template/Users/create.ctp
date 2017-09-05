@@ -45,7 +45,7 @@ $this->layout = false;
             </p>
 
             <p>
-                Envio direto para seus contatos via Whatsapp.
+                Receba notificações sobre seus contatos diretamente em seu Whatsapp.
             </p>
 
         </div>

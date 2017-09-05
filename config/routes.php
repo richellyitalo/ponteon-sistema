@@ -50,6 +50,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'home'], ['_name' => 'home']);
+    $routes->connect('/sair', ['controller' => 'Users', 'action' => 'logout']);
     $routes->connect('/novaconta', ['controller' => 'Users', 'action' => 'create'], ['_name' => 'create']);
     $routes->connect('/perfil', ['controller' => 'Users', 'action' => 'profile']);
     $routes->connect('/dashboard', ['controller' => 'Pages', 'action' => 'dashboard'], ['_name' => 'dashboard']);

@@ -28,8 +28,9 @@ class AuthUser
 	{
 		$authUserSession = (new Session())->read('Auth.User');
 		if ($authUserSession) {
-			//$userData = TableRegistry::get( 'Users' )->get($authUserSession['id']);
-			//$authUserSession['message'] = $userData->message;
+			$userData = TableRegistry::get( 'Users' )->get($authUserSession['id']);
+			if (!isset($authUserSession['message']))
+				$authUserSession['message'] = $userData->message;
 			$this->authUser = $authUserSession;
 		} else {
 			$this->authUser = null;
